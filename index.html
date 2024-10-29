@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Will You Marry Me?</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="proposal-window" id="proposal-window">
+    <h1>Will You Marry Me?</h1>
+    <div class="buttons">
+      <button class="no-btn">NO</button>
+      <button class="yes-btn">YES</button>
+    </div>
+  </div>
+
+  <script>
+    const noButton = document.querySelector('.no-btn');
+    const yesButton = document.querySelector('.yes-btn');
+
+    noButton.addEventListener('mouseenter', () => {
+      const randomX = Math.random() * 200 - 100; // Random X offset
+      const randomY = Math.random() * 200 - 100; // Random Y offset
+      noButton.style.transform = `translate(${randomX}px, ${randomY}px)`; // Change position
+    });
+
+    yesButton.addEventListener('click', () => {
+      alert("I knew you were going to say yes! ❤️");
+    });
+  </script>
+</body>
+</html>
